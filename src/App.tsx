@@ -6,6 +6,7 @@ import { AuthProvider } from "./context/AuthProvider.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import SchoolPage from "./pages/SchoolPage.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
               <Route path="register" element={<RegisterPage/>}/>
 
               <Route path="apps" element={<ProtectedRoute/>}>
-              {/* Protected routes... */}
+
               </Route>
+              <Route path ="teachers" element={<Dashboard/>}/>
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
